@@ -9,6 +9,7 @@ export { oakCors } from 'https://deno.land/x/cors@v1.2.2/mod.ts'
 
 export {
 	create as makeJWT,
+	type Header,
 	verify as verifyJWT,
 } from 'https://deno.land/x/djwt@v2.8/mod.ts'
 

@@ -1,4 +1,4 @@
-import { Header } from 'https://deno.land/x/djwt@v2.8/mod.ts'
+import { Header } from './deps.ts'
 
 //server status messages
 export const USERNAME_PASSWORD_ERROR_MSG = 'Invalid username or password'
