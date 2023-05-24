@@ -7,6 +7,7 @@ export const FAV_ALREADY_IN_DB = 'The fav is already in the database'
 export const SUCCESS_DELETE_FAV = 'The fav was successfully deleted'
 export const FAILURE_DELETE_FAV = 'The fav wasn\'t deleted'
 export const USER_ALREADY_EXIST_MSG = 'User already exists'
+export const USER_NOT_FOUND_MSG = 'User already exists'
 export const INVALID_REQUEST_BODY_ERROR_MSG = 'Invalid request body'
 export const INVALID_JWT_MSG = 'Invalid JWT'
 export const INTERNAL_SERVER_ERROR_MSG =

@@ -4,6 +4,7 @@ import {
 	INTERNAL_SERVER_ERROR_MSG,
 	INVALID_JWT_MSG,
 	OPERATION_SUCCESS_MSG,
+	USER_NOT_FOUND_MSG,
 } from '../const.ts'
 import { importKey } from '../utils.ts'
 
@@ -41,6 +42,9 @@ const userMiddleware = async (
 					ctx.response.status = 400
 					ctx.response.body = { success: false, message: INVALID_JWT_MSG }
 				}
+			} else {
+				ctx.response.status = 405
+				ctx.response.body = { success: false, message: USER_NOT_FOUND_MSG }
 			}
 		} else {
 			console.log('Not valid JWT')
