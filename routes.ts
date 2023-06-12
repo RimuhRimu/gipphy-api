@@ -24,20 +24,15 @@ const login = async (ctx: RouterContext<string>) => {
 			.value
 		console.log({ username, password })
 
-		if (!username || !password) {
+		if (
+			!username || username.length === 0 || !password || password.length === 0
+		) {
 			ctx.response.status = 400
 			ctx.response.body = {
 				success: false,
 				message: INVALID_REQUEST_BODY_ERROR_MSG,
 			}
 			return
-		}
-
-		if (!username?.length || !password?.length) {
-			ctx.response.body = {
-				success: false,
-				message: USERNAME_PASSWORD_ERROR_MSG,
-			}
 		}
 
 		const userDB = await users.findOne({ username }, { noCursorTimeout: false })
